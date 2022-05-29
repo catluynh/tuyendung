@@ -1,10 +1,7 @@
-module.exports = {
-  //...
-  devServer: {
-    compress: true,
-    disableHostCheck: true,
-    port: 3000,
-    contentBase: path.resolve(__dirname, "dist"),
-    historyApiFallback: { index: "/", disableDotRule: true },
-  },
-};
+module.exports = { 
+
+devServer: {
+port: 3000,
+compress: true,
+
+ }}
