@@ -46,8 +46,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack build",
+    "start": "webpack-dev-server --port 8000 --progress",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
