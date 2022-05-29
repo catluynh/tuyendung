@@ -29,8 +29,8 @@ function thanhToan() {
                 "payment_method": "paypal"
             },
             "redirect_urls": {
-                "return_url": "http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:3000/success",
-                "cancel_url": "http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:3000/cancel"
+                "return_url": "ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:3000/success",
+                "cancel_url": "ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:3000/cancel"
             },
             "transactions": [{
                 "item_list": {
