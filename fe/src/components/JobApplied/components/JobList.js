@@ -13,6 +13,11 @@ const JobList = ({ recruitments }) => {
             </div>
           );
         })}
+      {recruitments.length === 0 && (
+        <>
+          <p>Không có đơn ứng tuyển nào</p>
+        </>
+      )}
     </>
   );
 };

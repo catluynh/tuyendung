@@ -77,7 +77,7 @@ const ProductHeader = (props) => {
   };
   {
     isShowLinkUpdateProfile && (
-      <>{alert("Vui long cap nhat tai khoan de thuc hien ung tuyen")}</>
+      <>{alert("Cập nhật hồ sơ tài khoản để tiếp tục ứng tuyển.")}</>
     );
   }
   const handleSubmitModal = async (payload) => {
@@ -201,44 +201,46 @@ const ProductHeader = (props) => {
           <div>
             <>
               {props?.checkAppliedJob == false ? (
-                props?.role == 'nha_tuyen_dung' ? (<Button disabled={true}
-                  className="form-control d-flex align-items-center justify-content-center py-4 my-4"
-                  type="primary"
-                  icon={<BiPaperPlane />}
-                  onClick={handleAddButtonClick}>
-                  <span className="ps-2">
-                    Không thực hiện được
-                  </span>
-                </Button>) :
-                  props?.role == 'ung_tuyen_vien' ? (<Button
+                props?.role == "nha_tuyen_dung" ? (
+                  <Button
+                    disabled={true}
                     className="form-control d-flex align-items-center justify-content-center py-4 my-4"
                     type="primary"
                     icon={<BiPaperPlane />}
-                    onClick={handleAddButtonClick}>
-                    <span className="ps-2">
-                      {t("productDetail.applyNow")}
-                    </span>
-                  </Button>) :
-                    props?.role == undefined ?
-                      (<Button
-                        className="form-control d-flex align-items-center justify-content-center py-4 my-4"
-                        type="primary"
-                        icon={<BiPaperPlane />}
-                        onClick={handleAddButtonClick}>
-                        <span className="ps-2">
-                          {t("productDetail.applyNow")}
-                        </span>
-                      </Button>)
-                      : null
-              ) : props?.checkAppliedJob == true ? (<Button disabled={true}
-                className="form-control d-flex align-items-center justify-content-center py-4 my-4"
-                type="primary"
-                icon={<BiPaperPlane />}
-                onClick={handleAddButtonClick}>
-                <span className="ps-2">
-                  Đã ứng tuyển
-                </span>
-              </Button>) : null}
+                    onClick={handleAddButtonClick}
+                  >
+                    <span className="ps-2">Không thực hiện được</span>
+                  </Button>
+                ) : props?.role == "ung_tuyen_vien" ? (
+                  <Button
+                    className="form-control d-flex align-items-center justify-content-center py-4 my-4"
+                    type="primary"
+                    icon={<BiPaperPlane />}
+                    onClick={handleAddButtonClick}
+                  >
+                    <span className="ps-2">{t("productDetail.applyNow")}</span>
+                  </Button>
+                ) : props?.role == undefined ? (
+                  <Button
+                    className="form-control d-flex align-items-center justify-content-center py-4 my-4"
+                    type="primary"
+                    icon={<BiPaperPlane />}
+                    onClick={handleAddButtonClick}
+                  >
+                    <span className="ps-2">{t("productDetail.applyNow")}</span>
+                  </Button>
+                ) : null
+              ) : props?.checkAppliedJob == true ? (
+                <Button
+                  disabled={true}
+                  className="form-control d-flex align-items-center justify-content-center py-4 my-4"
+                  type="primary"
+                  icon={<BiPaperPlane />}
+                  onClick={handleAddButtonClick}
+                >
+                  <span className="ps-2">Đã ứng tuyển</span>
+                </Button>
+              ) : null}
             </>
           </div>
           <div>

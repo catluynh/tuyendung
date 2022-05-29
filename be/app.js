@@ -61,7 +61,7 @@ initSockets(io);
 
 //Lắng nghe port
 server.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}`);
+    console.log(`App listening at http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:${port}`);
 });
 
 // //Từ chối xử lý (lỗi kết nối)

@@ -42,7 +42,6 @@ const InformationPersonal = ({ showModal, onCloseModal, ...props }) => {
       gioiTinh: gender,
       diaChi: address,
       // soNamKinhNghiem: "Chưa có kinh nghiệm",
-      avatar: selectedImage,
       ngaySinh: birthDate,
       taiKhoan: userId?.taiKhoan._id,
     };
@@ -178,7 +177,7 @@ const InformationPersonal = ({ showModal, onCloseModal, ...props }) => {
             placeholder="Ví dụ: 0987059059"
           />
         </div>
-        <div className="pb-3">
+        {/* <div className="pb-3">
           <p>
             <strong>Email liên hệ</strong>{" "}
             <span className="text-danger">(*)</span>
@@ -194,7 +193,7 @@ const InformationPersonal = ({ showModal, onCloseModal, ...props }) => {
             size="default"
             placeholder="Ví dụ: hello.trungvinh@gmail.com"
           />
-        </div>
+        </div> */}
         <div className="pb-3">
           <p>
             <strong>Địa chỉ hiện tại</strong>{" "}
@@ -213,7 +212,7 @@ const InformationPersonal = ({ showModal, onCloseModal, ...props }) => {
           />
           <div className="pb-3">
             <p>
-              <strong>Chức danh việc làm</strong>{" "}
+              <strong>Giới tính</strong>{" "}
               <span className="text-danger">(*)</span>
             </p>
             <Select
@@ -226,7 +225,6 @@ const InformationPersonal = ({ showModal, onCloseModal, ...props }) => {
             >
               <Option value="Nam">Nam</Option>
               <Option value="Nữ">Nữ</Option>
-              <Option value="Khác">Khác</Option>
             </Select>
           </div>
         </div>

@@ -21,12 +21,11 @@ import { use } from "i18next";
 import { useHistory } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 
-
 const NavbarAdmin = (props) => {
   const [collapsed, setCollapsed] = React.useState(false);
   const dispatch = useDispatch();
   const [totalAll, setTotalAll] = useState();
-  const history = useHistory()
+  const history = useHistory();
 
   useEffect(() => {
     const getTotalRecruitments = async () => {
@@ -36,7 +35,7 @@ const NavbarAdmin = (props) => {
           let total = 0;
           res.data.map((item) => {
             total = total + item.tong;
-            setTotalAll(total)
+            setTotalAll(total);
           });
         });
       } catch (error) {
@@ -79,13 +78,17 @@ const NavbarAdmin = (props) => {
               Quản lý tin
               <Link to="/employer/dashboard" />
             </Menu.Item>
-            <Menu.Item key="3" onClick={() => {
-              if (totalAll >= 3) {
-                history.replace('/employer/job/payment')
-              } else if (totalAll < 3) {
-                history.replace('/employer/job/create')
-              }
-            }}>
+            <Menu.Item
+              key="3"
+              onClick={() => {
+                // if (totalAll >= 3) {
+                //   history.replace('/employer/job/payment')
+                // } else if (totalAll < 3) {
+                //   history.replace('/employer/job/create')
+                // }
+                history.replace("/employer/job/create");
+              }}
+            >
               Thêm mới tin
             </Menu.Item>
           </Menu.SubMenu>

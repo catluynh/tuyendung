@@ -6,6 +6,7 @@ import {
   Tooltip,
   Button,
   Dropdown,
+  Modal,
 } from "antd";
 import {
   DesktopOutlined,
@@ -199,27 +200,36 @@ const AllProfilePage = () => {
   }, []);
 
   // xóa đơn ứng tuyển
-  const handleAddButtonClickDelete = async (id) => {
-    try {
-      const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/${id}`;
-      await axios.delete(requestUrl).then((res) => {
-        if (res?.data?.status == "success") {
-          setIsSubmit(true);
-          toast.success("Cập nhật thành công", {
-            position: "bottom-right",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
+  // Modal confirm don ung tuyen
+  const confirmDeleteProfile = (id) =>
+    Modal.confirm({
+      title: `Bạn chắc chắn muốn xóa đơn ứng tuyển này?`,
+      // content: "first",
+      onOk: async () => {
+        try {
+          const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/${id}`;
+          await axios.delete(requestUrl).then((res) => {
+            if (res?.data?.status == "success") {
+              setIsSubmit(true);
+              toast.success("Cập nhật thành công", {
+                position: "bottom-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
+            }
+          });
+        } catch (error) {
+          Modal.error({
+            title: "error",
+            content: error.message,
           });
         }
-      });
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
+      },
+    });
 
   // ứng viêm tiềm năng
   const handleAddButtonClickTalent = async (id) => {
@@ -484,7 +494,7 @@ const AllProfilePage = () => {
                                                 </li>
                                                 <li
                                                   onClick={() => {
-                                                    handleAddButtonClickDelete(
+                                                    confirmDeleteProfile(
                                                       item?.donTuyenDung._id
                                                     );
                                                   }}

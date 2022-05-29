@@ -7,7 +7,7 @@ import {
   UserOutlined,
   SearchOutlined,
 } from "@ant-design/icons";
-import io from 'socket.io-client'
+import io from "socket.io-client";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { FaListUl, FaUserPlus } from "react-icons/fa";
 import { GoSignOut } from "react-icons/go";
@@ -36,17 +36,15 @@ const { TabPane } = Tabs;
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-
-
 const DashBoardQTV = () => {
   const [socket, setSocket] = useState(null);
-  useEffect(async () => {
-    if (!socket) {
-      const st = io.connect('http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000')
-      setSocket(st)
+  // useEffect(async () => {
+  //   if (!socket) {
+  //     const st = io.connect('http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000')
+  //     setSocket(st)
 
-    }
-  }, [socket])
+  //   }
+  // }, [socket])
 
   const { t } = useTranslation();
   const { listCareers, levels, typeWorks } = useCommonContext();
@@ -85,7 +83,7 @@ const DashBoardQTV = () => {
       setTotalCount(response?.data?.pagination?.total);
       setPagination(response?.data?.pagination);
       setIsSubmit(false);
-      console.log('socket', socket)
+      console.log("socket", socket);
     } catch (error) {
       console.log(error.response);
     }
@@ -113,7 +111,6 @@ const DashBoardQTV = () => {
   //   setPage(pg);
   // };
   const handleFiltersStatusChange = (newFilters) => {
-
     setFilters({
       ...filters,
       page: 1,
@@ -177,7 +174,6 @@ const DashBoardQTV = () => {
     }
   };
   useEffect(() => {
-
     getRecruitmentReviewLeast();
   }, [isGetRecruitmentReviewLeast]);
 
@@ -220,8 +216,8 @@ const DashBoardQTV = () => {
             draggable: true,
             progress: undefined,
           });
-          await socket.emit("duyet-tin-tuyen-dung", { id: id })
-          console.log('socket', socket)
+          await socket.emit("duyet-tin-tuyen-dung", { id: id });
+          console.log("socket", socket);
         }
       });
     } catch (error) {
@@ -593,7 +589,7 @@ const DashBoardQTV = () => {
                                               >
                                                 <>
                                                   {item?.trangThai ==
-                                                    "Chờ duyệt" ? (
+                                                  "Chờ duyệt" ? (
                                                     <>
                                                       <li
                                                         onClick={() => {
@@ -695,8 +691,9 @@ const DashBoardQTV = () => {
                       </div>
                     </TabPane>
                     <TabPane
-                      tab={`Chờ xét duyệt (${totalChoDuyet ? totalChoDuyet : 0
-                        })`}
+                      tab={`Chờ xét duyệt (${
+                        totalChoDuyet ? totalChoDuyet : 0
+                      })`}
                       key="1"
                     >
                       <div className="row">
@@ -877,7 +874,7 @@ const DashBoardQTV = () => {
                                         <tr key={index + 1}>
                                           <td className="align-middle">
                                             <p className="text-sm font-weight-bold mb-0 text-center">
-                                              {index}
+                                              {index + 1}
                                             </p>
                                           </td>
                                           <td>
@@ -1186,7 +1183,7 @@ const DashBoardQTV = () => {
                                         <tr key={index + 1}>
                                           <td className="align-middle">
                                             <p className="text-sm font-weight-bold mb-0 text-center">
-                                              {index}
+                                              {index + 1}
                                             </p>
                                           </td>
                                           <td>
@@ -1498,7 +1495,7 @@ const DashBoardQTV = () => {
                                         <tr key={index + 1}>
                                           <td className="align-middle">
                                             <p className="text-sm font-weight-bold mb-0 text-center">
-                                              {index}
+                                              {index + 1}
                                             </p>
                                           </td>
                                           <td>
@@ -2111,7 +2108,7 @@ const DashBoardQTV = () => {
                                         <tr key={index + 1}>
                                           <td className="align-middle">
                                             <p className="text-sm font-weight-bold mb-0 text-center">
-                                              {index}
+                                              {index + 1}
                                             </p>
                                           </td>
                                           <td>
@@ -2231,8 +2228,9 @@ const DashBoardQTV = () => {
                       </div>
                     </TabPane>
                     <TabPane
-                      tab={`Đánh giá kém (${totalReviewLeast ? totalReviewLeast : 0
-                        })`}
+                      tab={`Đánh giá kém (${
+                        totalReviewLeast ? totalReviewLeast : 0
+                      })`}
                       key="9"
                     >
                       <div className="row">
@@ -2276,7 +2274,10 @@ const DashBoardQTV = () => {
                           >
                             {listCareers.map((career, index) => {
                               return (
-                                <Option key={index} value={career.tenNganhNghe}>
+                                <Option
+                                  key={index + 1}
+                                  value={career.tenNganhNghe}
+                                >
                                   {career.tenNganhNghe}
                                 </Option>
                               );
@@ -2414,7 +2415,7 @@ const DashBoardQTV = () => {
                                           <tr key={index + 1}>
                                             <td className="align-middle">
                                               <p className="text-sm font-weight-bold mb-0 text-center">
-                                                {index}
+                                                {index + 1}
                                               </p>
                                             </td>
                                             <td>
@@ -2500,11 +2501,13 @@ const DashBoardQTV = () => {
                                                   aria-labelledby="dropdownMenuButton1"
                                                 >
                                                   <>
-                                                    {item?.tinTuyenDung?.trangThai == 'Khóa' ? (
+                                                    {item?.tinTuyenDung
+                                                      ?.trangThai == "Khóa" ? (
                                                       <li
                                                         onClick={() => {
                                                           handleAddButtonClickDetailBlock(
-                                                            item?.tinTuyenDung?._id
+                                                            item?.tinTuyenDung
+                                                              ?._id
                                                           );
                                                         }}
                                                       >
@@ -2512,11 +2515,14 @@ const DashBoardQTV = () => {
                                                           Mở khóa
                                                         </span>
                                                       </li>
-                                                    ) : item?.tinTuyenDung?.trangThai == 'Đã duyệt' ? (
+                                                    ) : item?.tinTuyenDung
+                                                        ?.trangThai ==
+                                                      "Đã duyệt" ? (
                                                       <li
                                                         onClick={() => {
                                                           handleAddButtonClickDetailBlock(
-                                                            item?.tinTuyenDung?._id
+                                                            item?.tinTuyenDung
+                                                              ?._id
                                                           );
                                                         }}
                                                       >
@@ -2524,8 +2530,7 @@ const DashBoardQTV = () => {
                                                           Khóa
                                                         </span>
                                                       </li>
-                                                    )
-                                                      : (null)}
+                                                    ) : null}
                                                   </>
                                                   <li
                                                     onClick={() => {

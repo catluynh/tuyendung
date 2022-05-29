@@ -48,6 +48,10 @@ const RecruitmentApi = {
     const url = `/tinTuyenDungs/timKiemTheoNhaTuyenDung`;
     return axiosClient.get(url, { params });
   },
+  updateRecruitmentStopById: (id) => {
+    const url = `tinTuyenDungs/dungTuyen/${id}`;
+    return axiosClient.patch(url);
+  },
 };
 
 export default RecruitmentApi;
