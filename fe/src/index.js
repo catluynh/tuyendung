@@ -14,6 +14,7 @@ import ProfileContextProvider from "./context/ProfileContextProvider";
 import SearchContextProvider from "./context/SearchContextProvider";
 import { ConfigProvider } from "antd";
 import vi_VN from "antd/lib/locale/vi_VN";
+import { EmployeerContext } from "./context/EmployeerContextProvider";
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
