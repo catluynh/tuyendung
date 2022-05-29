@@ -8,7 +8,7 @@ const guiEmail = async (options) => {
       user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_PASSWORD,
     },
-    secure: false
+    secure: true
     // Active in gmail "less secure app" option
   });
   // 2. Define the email option
