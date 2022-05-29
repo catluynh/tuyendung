@@ -30,7 +30,7 @@ const NavbarAdmin = (props) => {
 
   useEffect(() => {
     const getTotalRecruitments = async () => {
-      const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tongSoTinTheoTrangThaiNhaTuyenDung`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tongSoTinTheoTrangThaiNhaTuyenDung`;
       try {
         const response = await axiosClient.get(requestUrl).then((res) => {
           let total = 0;

@@ -7,7 +7,7 @@ import axiosClient from "../../services/axiosClient";
 export const Payment = ({ }) => {
   useEffect(() => {
     const getPayMent = async () => {
-      const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/thanhToan`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/thanhToan`;
       try {
         await axiosClient.post(requestUrl);
       } catch (error) {

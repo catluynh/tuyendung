@@ -142,7 +142,7 @@ const NewForProfileDetail = () => {
   const [totalAll, setTotalAll] = useState();
   useEffect(() => {
     const getTotalApplication = async () => {
-      const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/demDonUngTuyentheoTin/${params?.id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/demDonUngTuyentheoTin/${params?.id}`;
       try {
         const response = await axiosClient.get(requestUrl).then((res) => {
           let total = 0;
@@ -164,7 +164,7 @@ const NewForProfileDetail = () => {
   const [recruitmentById, setRecruitmentById] = useState();
   useEffect(() => {
     const getRecruitmentById = async () => {
-      const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/${params?.id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/${params?.id}`;
       try {
         await axiosClient.get(requestUrl).then((res) => {
           setRecruitmentById(res.data);
@@ -177,8 +177,8 @@ const NewForProfileDetail = () => {
   }, []);
 
   const handleSendEmailTalent = async (recruitment) => {
-    const requestUrlTalent = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/donUngTuyenTiemNang`;
-    const requestUrlSendEmail = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/sendEmail`;
+    const requestUrlTalent = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/donUngTuyenTiemNang`;
+    const requestUrlSendEmail = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/sendEmail`;
     try {
       await axiosClient.get(requestUrlTalent).then(res => {
         res?.data?.map(async item => {
@@ -199,7 +199,7 @@ const NewForProfileDetail = () => {
         })
       })
 
-      // const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/${id}`;
+      // const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/${id}`;
       // await axios.delete(requestUrl).then((res) => {
       //   if (res?.data?.status == "success") {
       //     setIsSubmit(true);

@@ -63,7 +63,7 @@ const DashBoardQTVEmployer = () => {
   const [value, setValue] = useState(0);
 
   const getDataListFilters = async () => {
-    const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/nhaTuyenDungs?${paramsString}`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/nhaTuyenDungs?${paramsString}`;
     try {
       const response = await axios.get(requestUrl);
       setRecruitments(response.data.data);
@@ -126,7 +126,7 @@ const DashBoardQTVEmployer = () => {
 
   useEffect(() => {
     const getTotalStatus = async () => {
-      const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tongSoTinTheoTrangThai`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tongSoTinTheoTrangThai`;
       try {
         const response = await axios.get(requestUrl).then((res) => {
           res.data.data.map((item) => {
@@ -150,7 +150,7 @@ const DashBoardQTVEmployer = () => {
   const [recruitmentReviewLeast, setRecruitmentReviewLeast] = useState([]);
   useEffect(() => {
     const getRecruitmentReviewLeast = async () => {
-      const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tinTuyenDungCoNguyCoKhoa`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tinTuyenDungCoNguyCoKhoa`;
       try {
         const response = await axios.get(requestUrl);
         setRecruitmentReviewLeast(response?.data?.data);
@@ -164,7 +164,7 @@ const DashBoardQTVEmployer = () => {
 
   //Khóa tài khoản
   const handleAddButtonClickBlock = async (id) => {
-    const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/quanTriViens/khoataikhoan/${id}`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/quanTriViens/khoataikhoan/${id}`;
     try {
       const response = await axios.patch(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
@@ -187,7 +187,7 @@ const DashBoardQTVEmployer = () => {
 
   //Mở khóa tài khoản
   const handleAddButtonClickUnBlock = async (id) => {
-    const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/quanTriViens/motaikhoan/${id}`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/quanTriViens/motaikhoan/${id}`;
     try {
       const response = await axios.patch(requestUrl).then((res) => {
         if (res?.data?.status == "success") {

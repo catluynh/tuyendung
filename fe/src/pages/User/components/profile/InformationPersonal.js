@@ -115,7 +115,7 @@ const InformationPersonal = ({ showModal, onCloseModal, ...props }) => {
             onChange={(event) => {
               let formData = new FormData();
               formData.append("file", event.target.files[0]);
-              const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/ungtuyenviens/capNhatAvatar`;
+              const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/ungtuyenviens/capNhatAvatar`;
               axios({
                 method: "patch",
                 url: requestUrl,

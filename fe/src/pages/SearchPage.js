@@ -28,7 +28,7 @@ const SearchPage = (props) => {
 
   const searchProducts = async () => {
     console.log("Call api in search");
-    const requestUrl = `ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/timKiemTheoNhieuTieuChi${queryParams}`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/timKiemTheoNhieuTieuChi${queryParams}`;
     console.log("ttv requestUrl  ", requestUrl);
     try {
       const response = await axios.get(requestUrl);
