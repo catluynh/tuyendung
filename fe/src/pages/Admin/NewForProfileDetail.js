@@ -192,7 +192,7 @@ const NewForProfileDetail = () => {
               message: `Xin chào <strong>${item?.donTuyenDung?.ungTuyenVien?.ten}</strong> <br> <strong>Jobs Board</strong> gửi bạn việc làm phù hợp mới ngày ${TimeUtils.formatDateTime(
                 recruitment?.ngayTao,
                 "DD-MM-YYYY"
-              )} <br> Vui lòng click vào link này để biết thêm thông tin chi tiết: http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:3000:3000/job-detail/${recruitment._id}`
+              )} <br> Vui lòng click vào link này để biết thêm thông tin chi tiết: http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:3000/job-detail/${recruitment._id}`
             }
             await axios.post(requestUrlSendEmail, sendMail)
           }
