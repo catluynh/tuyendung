@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:3000](ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:3000) to view it in your browser.
+Open [http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:3000:3000](http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:3000:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

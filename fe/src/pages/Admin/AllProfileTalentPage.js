@@ -74,7 +74,7 @@ const AllProfilePage = () => {
 
   const getDataListFilters = async () => {
     const paramsString = queryString.stringify(filters);
-    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/donUngTuyenTiemNang?${paramsString}`;
+    const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/donUngTuyenTiemNang?${paramsString}`;
     try {
       const response = await axiosClient.get(requestUrl);
       setRecruitments(response.data);
@@ -178,7 +178,7 @@ const AllProfilePage = () => {
   const [totalAll, setTotalAll] = useState();
   useEffect(() => {
     const getTotalApplication = async () => {
-      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/demDonUngTuyenTiemNang`;
+      const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/demDonUngTuyenTiemNang`;
       try {
         const response = await axiosClient.get(requestUrl).then((res) => {
           let total = 0;
@@ -201,7 +201,7 @@ const AllProfilePage = () => {
   // xóa đơn ứng tuyển
   const handleAddButtonClickDelete = async (id) => {
     try {
-      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/${id}`;
+      const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/${id}`;
       await axios.delete(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);
@@ -224,7 +224,7 @@ const AllProfilePage = () => {
   // ứng viêm tiềm năng
   const handleAddButtonClickTalent = async (id) => {
     try {
-      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/themDonUngTuyenTiemNang/${id}`;
+      const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/themDonUngTuyenTiemNang/${id}`;
       await axios.patch(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);

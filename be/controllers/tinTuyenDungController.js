@@ -753,8 +753,8 @@ class TinTuyenDungController {
                     "payment_method": "paypal"
                 },
                 "redirect_urls": {
-                    "return_url": "ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:3000/employer/job/create",
-                    "cancel_url": "ec2-54-179-0-126.ap-southeast-1.compute.amazonaws.com:3000/failure"
+                    "return_url": "http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:3000:3000/employer/job/create",
+                    "cancel_url": "http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:3000:3000/failure"
                 },
                 "transactions": [{
                     "item_list": {

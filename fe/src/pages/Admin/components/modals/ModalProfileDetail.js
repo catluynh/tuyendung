@@ -86,7 +86,7 @@ const ModalProfileDetail = ({
   // Chấp nhận đơn ứng tuyển
   const handleAddButtonClickAccept = async (id) => {
     try {
-      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/chapNhanDonUngTuyen/${id}`;
+      const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/chapNhanDonUngTuyen/${id}`;
       await axiosClient.patch(requestUrl).then((res) => {
         if (res?.status == "success") {
           setIsSubmit(true);
@@ -110,7 +110,7 @@ const ModalProfileDetail = ({
   // Từ chối đơn ứng tuyển
   const handleAddButtonClickDeny = async (id) => {
     try {
-      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/tuChoiDonUngTuyen/${id}`;
+      const requestUrl = `http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000/donUngTuyens/tuChoiDonUngTuyen/${id}`;
       await axiosClient.patch(requestUrl).then((res) => {
         if (res?.status == "success") {
           setIsSubmit(true);
