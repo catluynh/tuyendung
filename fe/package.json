@@ -46,8 +46,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -68,6 +68,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://ec2-13-213-53-29.ap-southeast-1.compute.amazonaws.com:4000"
+  }
 }
