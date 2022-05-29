@@ -8,10 +8,7 @@ const guiEmail = async (options) => {
       user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_PASSWORD,
     },
-   secureConnection: false,
-     tls: {
-        ciphers:'SSLv3'
-    }
+   secure: false
   });
   // 2. Define the email option
   const mailOptions = {
