@@ -1,0 +1,25 @@
+.jobItemImageWrapper {
+  width: 52px;
+  height: 52px;
+}
+.jobItemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.jobItemFavorite:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.jobItemParagraph {
+  padding: 0 8px;
+  width: 270px;
+}
+.jobItemSalary {
+  width: 100%;
+  max-width: 88px;
+}
+.jobItemAddress {
+  width: 100%;
+  max-width: 135px;
+}

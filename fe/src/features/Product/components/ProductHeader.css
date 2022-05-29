@@ -1,0 +1,11 @@
+.box-info-job h1{
+    font-size: 22px;
+    line-height: 29px;
+    margin-bottom: 16px;
+    color: #2A3E92;
+}
+.company-title a{
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+}

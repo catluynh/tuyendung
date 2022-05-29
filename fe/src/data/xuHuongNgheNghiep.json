@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "image": "https://123job.vn/images/new/developer.jpg",
+    "title": "IT phần mềm"
+  },
+  {
+    "id": "2",
+    "image": "https://123job.vn/images/new/ban-hang.jpg",
+    "title": "Bán hàng"
+  },
+  {
+    "id": "3",
+    "image": "https://123job.vn/images/new/ban-hang.jpg",
+    "title": "Marketing - PR"
+  },
+  {
+    "id": "4",
+    "image": "https://123job.vn/images/new/ke-toan.jpg",
+    "title": "Kế toán - Kiểm toán"
+  },
+  {
+    "id": "5",
+    "image": "https://123job.vn/images/new/ke-toan.jpg",
+    "title": "Khách sạn - Nhà hàng"
+  },
+  {
+    "id": "6",
+    "image": "https://123job.vn/images/new/translator.jpg",
+    "title": "Phiên dịch/ Ngoại ngữ"
+  },
+  {
+    "id": "7",
+    "image": "https://123job.vn/images/new/officer.jpg",
+    "title": "Hành chính - Văn phòng"
+  },
+  {
+    "id": "8",
+    "image": "https://123job.vn/images/new/ky-thuat-2.jpg",
+    "title": "Kỹ thuật"
+  }
+]

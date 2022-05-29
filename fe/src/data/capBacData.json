@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "capBac": "Sinh viên"
+  },
+  {
+    "id": "2",
+    "capBac": "Thực tập"
+  },
+  {
+    "id": "3",
+    "capBac": "Mới tốt nghiệp"
+  },
+  {
+    "id": "4",
+    "capBac": "Nhân viên"
+  },
+  {
+    "id": "5",
+    "capBac": "Trưởng phòng"
+  },
+  {
+    "id": "6",
+    "capBac": "Giám sát"
+  },
+  {
+    "id": "7",
+    "capBac": "Quản lý"
+  },
+  {
+    "id": "8",
+    "capBac": "Phó giám đốc"
+  },
+  {
+    "id": "9",
+    "capBac": "Khac"
+  }
+
+]

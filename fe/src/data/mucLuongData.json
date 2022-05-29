@@ -1,0 +1,55 @@
+[
+  {
+    "id": "1",
+    "mucLuong": "Dưới 1 triệu"
+  },
+  {
+    "id": "2",
+    "mucLuong": "1 - 3 triệu"
+  },
+  {
+    "id": "3",
+    "mucLuong": "3 - 5 triệu"
+  },
+  {
+    "id": "4",
+    "mucLuong": "5 - 7 triệu"
+  },
+  {
+    "id": "5",
+    "mucLuong": "7 - 10 triệu"
+  },
+  {
+    "id": "6",
+    "mucLuong": "10 - 12 triệu"
+  },
+  {
+    "id": "7",
+    "mucLuong": "12 - 15 triệu"
+  },
+  {
+    "id": "8",
+    "mucLuong": "15 - 20 triệu"
+  },
+  {
+    "id": "9",
+    "mucLuong": "20 - 25 triệu"
+  },
+  {
+    "id": "10",
+    "mucLuong": "25 - 30 triệu"
+  },
+  {
+    "id": "11",
+    "mucLuong": "30 - 40 triệu"
+  },
+  {
+    "id": "12",
+    "mucLuong": "40 - 50 triệu"
+  },
+  {
+    "id": "13",
+    "mucLuong": "Trên 50 triệu"
+  }
+
+]

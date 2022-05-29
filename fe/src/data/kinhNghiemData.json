@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "kinhNghiem": "Chưa có kinh nghiệm"
+  },
+  {
+    "id": "2",
+    "kinhNghiem": "Dưới 1 năm"
+  },
+  {
+    "id": "3",
+    "kinhNghiem": "1 năm"
+  },
+  {
+    "id": "4",
+    "kinhNghiem": "2 năm"
+  },
+  {
+    "id": "5",
+    "kinhNghiem": "3 năm"
+  },
+  {
+    "id": "6",
+    "kinhNghiem": "4 năm"
+  },
+  {
+    "id": "7",
+    "kinhNghiem": "5 năm"
+  },
+  {
+    "id": "8",
+    "kinhNghiem": "Trên 5 năm"
+  }
+]

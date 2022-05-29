@@ -1,0 +1,106 @@
+
+.bg-login{
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+border-radius: 0.4rem;
+/* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.input-wrapper {
+  margin-bottom: 1rem;
+}
+.input-wrapper-item {
+  position: relative;
+  width: 20rem;
+  height: 2.8rem;
+}
+.input-wrapper-item .form__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c4c4c4;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: inherit;
+    color: #8c857d;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+  } 
+.input-wrapper-item .form__input .is-invalid{
+  border-color: #bf1650 !important;
+}
+.form__input:focus {
+  border-color: #7467ef;
+  color: #161514;
+}
+
+.form__input:hover {
+  border-color: rgb(81, 72, 167);
+}
+
+.input-wrapper-item .form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  padding: 0 0.5rem;
+  color: rgba(0, 0, 0, 0.452);
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: var(--clr-bg);
+      border-radius: 8px;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+  color: rgb(81, 72, 167);
+}
+
+
+.input-wrapper-item-radio label:hover {
+  cursor: pointer;
+}
+
+.input-wrapper .wrapper {
+  border: 2px dashed #c2cdda;
+  width: 200px;
+  padding: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  position: relative;
+}
+
+.input-wrapper .wrapper label:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 952px) {
+  .input-wrapper-item .form__input {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .input-wrapper-item {
+    width: 17rem;
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .input-wrapper-item {
+    width: 24rem;
+    height: 3rem;
+  }
+}

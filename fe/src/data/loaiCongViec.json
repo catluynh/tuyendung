@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "loaiCongViec": "Toàn thời gian"
+  },
+  {
+    "id": "2",
+    "loaiCongViec": "Bán thời gian"
+  },
+  {
+    "id": "3",
+    "loaiCongViec": "Thực tập sinh"
+  },
+  {
+    "id": "4",
+    "loaiCongViec": "Thời vụ"
+  },
+  {
+    "id": "5",
+    "loaiCongViec": "Hợp đồng"
+  },
+  {
+    "id": "6",
+    "loaiCongViec": "Khác"
+  }
+
+]
