@@ -1,7 +1,8 @@
 module.exports = {
-  //...
-  devServer: {
-    host: '0.0.0.0',
-    disableHostCheck: true
-  },
+  compress: true,
+  inline: true,
+  port: '3000',
+  allowedHosts: [
+    '.amazonaws.com'
+  ]
 };
