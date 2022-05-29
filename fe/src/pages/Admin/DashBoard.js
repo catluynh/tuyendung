@@ -27,7 +27,7 @@ const MainNavigationAdmin = () => {
   const [socket, setSocket] = useState(null);
   useEffect(async () => {
     if (!socket) {
-      const st = io.connect('http://localhost:4000')
+      const st = io.connect('http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000')
       setSocket(st)
 
     }
@@ -87,7 +87,7 @@ const MainNavigationAdmin = () => {
   };
 
   const getDataListFilters = async () => {
-    const requestUrl = `http://localhost:4000/tinTuyenDungs/timKiemTheoNhaTuyenDung?${paramsString}`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/timKiemTheoNhaTuyenDung?${paramsString}`;
     try {
       const response = await axiosClient.get(requestUrl);
       console.log("responseresponse", response.data);
@@ -160,7 +160,7 @@ const MainNavigationAdmin = () => {
   const [totalAll, setTotalAll] = useState();
 
   const getTotalStatus = async () => {
-    const requestUrl = `http://localhost:4000/tinTuyenDungs/tongSoTinTheoTrangThaiNhaTuyenDung`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tongSoTinTheoTrangThaiNhaTuyenDung`;
     try {
       const response = await axiosClient.get(requestUrl).then((res) => {
         let total = 0;
@@ -192,7 +192,7 @@ const MainNavigationAdmin = () => {
   // xóa tin
   const handleAddButtonClickDetailDelete = async (id) => {
     try {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/${id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/${id}`;
       await axios.delete(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);
@@ -215,7 +215,7 @@ const MainNavigationAdmin = () => {
   // dừng tin
   const handleAddButtonClickDetailStop = async (id) => {
     try {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/dungTuyen/${id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/dungTuyen/${id}`;
       await axios.patch(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);

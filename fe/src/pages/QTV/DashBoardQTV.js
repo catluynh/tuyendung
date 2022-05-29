@@ -42,7 +42,7 @@ const DashBoardQTV = () => {
   const [socket, setSocket] = useState(null);
   useEffect(async () => {
     if (!socket) {
-      const st = io.connect('http://localhost:4000')
+      const st = io.connect('http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000')
       setSocket(st)
 
     }
@@ -78,7 +78,7 @@ const DashBoardQTV = () => {
   const [value, setValue] = useState(0);
 
   const getDataListFilters = async () => {
-    const requestUrl = `http://localhost:4000/tinTuyenDungs/soLuongDanhGiaTheoTin?${paramsString}`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/soLuongDanhGiaTheoTin?${paramsString}`;
     try {
       const response = await axios.get(requestUrl);
       setRecruitments(response.data.data);
@@ -137,7 +137,7 @@ const DashBoardQTV = () => {
   const [totalAll, setTotalAll] = useState();
 
   const getTotalStatus = async () => {
-    const requestUrl = `http://localhost:4000/tinTuyenDungs/tongSoTinTheoTrangThai`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tongSoTinTheoTrangThai`;
     try {
       const response = await axios.get(requestUrl).then((res) => {
         let total = 0;
@@ -166,7 +166,7 @@ const DashBoardQTV = () => {
   const [recruitmentReviewLeast, setRecruitmentReviewLeast] = useState([]);
   const [totalReviewLeast, setTotalReviewLeast] = useState([]);
   const getRecruitmentReviewLeast = async () => {
-    const requestUrl = `http://localhost:4000/tinTuyenDungs/tinTuyenDungCoNguyCoKhoa`;
+    const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tinTuyenDungCoNguyCoKhoa`;
     try {
       const response = await axios.get(requestUrl);
       setRecruitmentReviewLeast(response?.data?.data);
@@ -184,7 +184,7 @@ const DashBoardQTV = () => {
   // xóa tin
   const handleAddButtonClickDetailDelete = async (id) => {
     try {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/${id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/${id}`;
       await axios.delete(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);
@@ -207,7 +207,7 @@ const DashBoardQTV = () => {
   // duyệt tin
   const handleAddButtonClickDetailAccept = async (id) => {
     try {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/duyetTin/${id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/duyetTin/${id}`;
       await axios.patch(requestUrl).then(async (res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);
@@ -232,7 +232,7 @@ const DashBoardQTV = () => {
   // mở / khóa tin
   const handleAddButtonClickDetailBlock = async (id) => {
     try {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/khoaTin/${id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/khoaTin/${id}`;
       await axios.patch(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);
@@ -255,7 +255,7 @@ const DashBoardQTV = () => {
   // Từ chối
   const handleAddButtonClickDetailDeny = async (id) => {
     try {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/tuChoiTin/${id}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/tuChoiTin/${id}`;
       await axios.patch(requestUrl).then((res) => {
         if (res?.data?.status == "success") {
           setIsSubmit(true);

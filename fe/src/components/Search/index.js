@@ -125,7 +125,7 @@ const SearchCommon = ({ careers, fields, locations }) => {
 
   useEffect(() => {
     const searchProducts = async () => {
-      const requestUrl = `http://localhost:4000/tinTuyenDungs/timKiemTheoNhieuTieuChi?${paramsString}`;
+      const requestUrl = `http://ec2-3-0-177-195.ap-southeast-1.compute.amazonaws.com:4000/tinTuyenDungs/timKiemTheoNhieuTieuChi?${paramsString}`;
       try {
         // const response = await productApi.searchProducts(keyword);
         const response = await axios.get(requestUrl);
