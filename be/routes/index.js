@@ -13,6 +13,10 @@ const donUngTuyenTiemNangRouter = require('./donUngTuyenTiemNangRoutes');
 const viecLamQuanTamRouter = require('./viecLamQuanTamRoutes');
 
 function route(app) {
+       app.use((req, res, next) => {
+        res.header('Access-Control-Allow-Origin', '*');
+        next();
+      });
     app.use('/auth', authRouter);
     app.use('/taiKhoans', taiKhoanRouter);
     app.use('/nhaTuyenDungs', nhaTuyenDungRouter);
